@@ -1,7 +1,7 @@
 import Navigation from "./components/headerComponent/Navigation.tsx";
 import {Route, Routes} from "react-router";
 import FavoriteCats from "./components/favoriteCats/FavoriteCats.tsx";
-import CatGallery from "./components/mainCats/Cats.tsx";
+import CatGallery from "./components/mainCats/CatGallery.tsx";
 
 function App() {
 
