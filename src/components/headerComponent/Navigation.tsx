@@ -2,6 +2,7 @@ import {NavLink} from "react-router";
 import './navigation.css'
 
 const Header = () => {
+
     return (
         <header className="header">
             <nav className="nav">
@@ -12,6 +13,7 @@ const Header = () => {
                     <p className='p_name'>Любимые котики</p>
                 </NavLink>
             </nav>
+
         </header>
     );
 };
