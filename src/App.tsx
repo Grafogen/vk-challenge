@@ -1,7 +1,7 @@
 import Navigation from "./components/headerComponent/Navigation.tsx";
 import {Route, Routes} from "react-router";
-import Cats from "./components/mainCats/Cats.tsx";
 import FavoriteCats from "./components/favoriteCats/FavoriteCats.tsx";
+import CatGallery from "./components/mainCats/CatGallery.tsx";
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
         <div>
             <Navigation/>
             <Routes>
-                <Route index  element={<Cats/>} />
+                <Route index  element={<CatGallery/>} />
                 <Route path='/favorites' element={<FavoriteCats/>} />
             </Routes>
         </div>
