@@ -9,8 +9,16 @@ const CatGallery = () => {
     const [isLoading, setIsLoading] = useState(false);
     const limit = 20;
 
-    const fetchCats = async ():Promise<CatInterface[]> => {
-        const response = await fetch(`https://api.thecatapi.com/v1/images/search?limit=${limit}&offset=${currentCount}`);
+    const fetchCats = async (): Promise<CatInterface[]> => {
+        const response = await fetch(`https://api.thecatapi.com/v1/images/search?limit=${limit}&offset=${currentCount}`, {
+            method: 'GET',
+            headers: {
+                'x-api-key': 'live_HibiajZcQLEYkbGReACTG87bEkGZDX1709mSUpK0X4WPm91kEiH3A5A8agG4lDRZ'
+            }
+        });
+        if (!response.ok) {
+            throw new Error('Ошибка при получении котиков: ' + response.statusText);
+        }
         const data = await response.json();
         return data;
     };
